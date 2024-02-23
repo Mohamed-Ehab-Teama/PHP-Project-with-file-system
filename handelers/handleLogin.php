@@ -29,7 +29,7 @@ if (checkRequestMethod("POST") && checkPostInput('email')) {
     }
 
 
-
+    // GET Data From CSV File into array $arr to check it with login data
     $arr = [];
 
     $handle = fopen("../data/users.csv", "c+");
@@ -40,6 +40,7 @@ if (checkRequestMethod("POST") && checkPostInput('email')) {
     }
 
 
+    // Will use them while looping on CSV file data stored in the $arr array
     $success = false;
     $x = 0;
 
