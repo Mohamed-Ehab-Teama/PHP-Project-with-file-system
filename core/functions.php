@@ -25,3 +25,17 @@ function sanitizeInput($input){
 
     return trim(htmlspecialchars(htmlentities($input)));
 }
+
+function redirect($path){
+
+    return header("location:$path");
+}
+
+
+function loginVal($value1,$value2){
+
+    if($value1 == $value2) {
+        return TRUE;
+    }
+    return FALSE;
+}
